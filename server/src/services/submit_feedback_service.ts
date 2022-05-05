@@ -18,6 +18,18 @@ export class SubmitFeedbackService {
   async execute(req: SubmitFeedbackServiceRequest): Promise<Feedback> {
     const feedback = await this.feedbacksRepository.create(req)
 
+    if (!req.type) {
+      throw new Error('Type is required')
+    }
+
+    if (!req.comment) {
+      throw new Error('Comment is required')
+    }
+
+    if (req.screenshot && !req.screenshot.startsWith('data:image/png;base64')) {
+      throw new Error('Screenshot must be a base64 encoded PNG image')
+    }
+
     const { type, comment, screenshot, created_at } = feedback
 
     await this.mailAdapter.sendMail({
