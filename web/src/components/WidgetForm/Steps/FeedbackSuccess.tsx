@@ -36,12 +36,14 @@ export function FeedbackSuccess({ onFeedbackRestart }: FeedbackSuccessProps) {
         <button
           onClick={onFeedbackRestart}
           className="
-            py-2 px-6 mt-6 text-sm
+            py-2 px-6 mt-6 text-sm transition-colors
             leading-6 rounded-md border-transparent
-          bg-zinc-800 hover:bg-zinc-700 transition-colors
-            focus:outline-none focus:ring-brand-500
-            focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900
+          bg-zinc-100 hover:bg-zinc-200
+          dark:bg-zinc-800 dark:hover:bg-zinc-700
 
+            focus:outline-none focus:ring-brand-500
+            focus:ring-2 focus:ring-offset-2
+            focus:ring-offset-zinc-300 dark:focus:ring-offset-zinc-900
           "
         >
           Quero enviar outro

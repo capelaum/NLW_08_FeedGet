@@ -16,7 +16,7 @@ export function Widget() {
           flex items-center group
         "
       >
-        <ChatTeardropDots className="w-6 h-6 " />
+        <ChatTeardropDots className="w-6 h-6" />
 
         <span
           className="

@@ -14,7 +14,7 @@ body {
 }
 
 main {
-  @apply bg-zinc-50 dark:bg-[#09090A] dark:text-zinc-100 text-zinc-900 flex flex-col flex-grow;
+  @apply bg-zinc-100 text-zinc-800 dark:bg-[#09090A] dark:text-zinc-100 flex flex-col flex-grow;
 }
 
 input:disabled,

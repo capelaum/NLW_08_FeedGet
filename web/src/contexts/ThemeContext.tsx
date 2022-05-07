@@ -27,7 +27,7 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
 
     if (
       !savedTheme &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches
+      window?.matchMedia('(prefers-color-scheme: dark)').matches
     ) {
       setTheme('dark')
     } else {

@@ -1,6 +1,5 @@
 import { ArrowLeft } from 'phosphor-react'
 import { FormEvent, useState } from 'react'
-import { api } from '../../../services/api'
 import { CloseButton } from '../../CloseButton'
 import { Loading } from '../../Loading'
 import { ScreenshotButton } from '../ScreenshotButton'
@@ -27,13 +26,13 @@ export function FeedbackContent({
     event.preventDefault()
     setIsSendingFeedback(true)
 
-    await api.post('/feedbacks', {
-      type: feedbackType,
-      comment,
-      screenshot
-    })
+    // await api.post('/feedbacks', {
+    //   type: feedbackType,
+    //   comment,
+    //   screenshot
+    // })
 
-    setIsSendingFeedback(false)
+    // setIsSendingFeedback(false)
     onFeedbackSent()
   }
 
@@ -43,7 +42,11 @@ export function FeedbackContent({
         <button
           type="button"
           onClick={onFeedbackRestart}
-          className="absolute top-5 left-5 text-zinc-400 hover:text-zinc-100"
+          className="
+            absolute top-5 left-5
+          text-zinc-500 hover:text-zinc-800
+          dark:text-zinc-400 dark:hover:text-zinc-100
+          "
         >
           <ArrowLeft weight="bold" className="w-4 h-4" />
         </button>
@@ -62,11 +65,16 @@ export function FeedbackContent({
           onChange={e => setComment(e.target.value)}
           className="
               w-full min-h-[120px] tex-sm
-            placeholder-zinc-400 text-zinc-100 border border-zinc-600
               bg-transparent rounded-md resize-y
+            text-zinc-800 dark:text-zinc-100
+            placeholder-zinc-500 dark:placeholder-zinc-400
+              border border-zinc-300 dark:border-zinc-600
+
             focus:border-brand-500 focus:outline-none
             focus:ring-brand-500 focus:ring-1
-            scrollbar-thin scrollbar-thumb-zinc-700 scrollbar-track-transparent
+
+              scrollbar-track-transparent scrollbar-thin
+            scrollbar-thumb-zinc-300 dark:scrollbar-thumb-zinc-600
             "
         />
 
@@ -80,13 +88,14 @@ export function FeedbackContent({
             type="submit"
             disabled={comment.trim().length === 0 || isSendingFeedback}
             className="
-              p-2 bg-brand-500 rounded-md
-              transition-colors duration-200
+              transition-colors
+              p-2 rounded-md text-md
               border-transparent flex-1
-              flex justify-center items-center text-md
-              hover:bg-brand-400
+              flex justify-center items-center
+              bg-brand-500 hover:bg-brand-400 text-white
               focus:outline-none focus:ring-brand-500
-              focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900
+              focus:ring-2 focus:ring-offset-2
+              focus:ring-offset-zinc-300 dark:focus:ring-offset-zinc-900
               disabled:opacity-50 disabled:hover:bg-brand-500
             "
           >

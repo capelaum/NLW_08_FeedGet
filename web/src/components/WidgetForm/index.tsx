@@ -37,7 +37,7 @@ export function WidgetForm() {
   return (
     <div
       className="
-        min-w-auto sm:min-w-[340px] bg-zinc-900 p-4
+        min-w-auto sm:min-w-[340px] bg-white dark:bg-zinc-900 p-4
         relative rounded-2xl mb-4
         flex flex-col items-center
         shadow-lg
@@ -47,10 +47,10 @@ export function WidgetForm() {
     >
       {renderContent()}
 
-      <footer className="text-xs text-neutral-400">
+      <footer className="text-xs text-zinc-500 dark:text-neutral-400">
         Feito com 💜 por{' '}
         <a
-          className="underline underline-offset-2"
+          className="hover:underline underline-offset-2 transition-all"
           href="https://github.com/capelaum"
           target="_blank"
           rel="noreferrer"
