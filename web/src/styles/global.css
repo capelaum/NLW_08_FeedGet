@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
 body {
   @apply bg-[#09090A] text-zinc-100;
+}
+
+input:disabled,
+button:disabled {
+  cursor: not-allowed;
 }

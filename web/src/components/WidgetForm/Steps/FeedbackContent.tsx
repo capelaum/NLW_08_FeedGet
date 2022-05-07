@@ -15,7 +15,7 @@ interface FeedbackContentProps {
 export function FeedbackContent({
   feedbackType,
   onFeedbackRestart,
-  onFeedbackSent,
+  onFeedbackSent
 }: FeedbackContentProps) {
   const [screenshot, setScreenshot] = useState<string | null>(null)
   const [comment, setComment] = useState('')
@@ -30,7 +30,7 @@ export function FeedbackContent({
     await api.post('/feedbacks', {
       type: feedbackType,
       comment,
-      screenshot,
+      screenshot
     })
 
     setIsSendingFeedback(false)
@@ -59,7 +59,7 @@ export function FeedbackContent({
       <form onSubmit={handleSubmitFeedback} className="my-4 w-full">
         <textarea
           placeholder={text}
-          onChange={(e) => setComment(e.target.value)}
+          onChange={e => setComment(e.target.value)}
           className="
               w-full min-h-[120px] tex-sm
             placeholder-zinc-400 text-zinc-100 border border-zinc-600
@@ -88,7 +88,6 @@ export function FeedbackContent({
               focus:outline-none focus:ring-brand-500
               focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900
               disabled:opacity-50 disabled:hover:bg-brand-500
-              disabled:cursor-not-allowed
             "
           >
             {isSendingFeedback ? <Loading /> : 'Enviar feedback'}
