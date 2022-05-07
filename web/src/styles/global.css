@@ -13,8 +13,8 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-body {
-  @apply bg-[#09090A] text-zinc-100;
+main {
+  @apply bg-zinc-50 dark:bg-[#09090A] dark:text-zinc-100 text-zinc-900 flex flex-col flex-grow;
 }
 
 input:disabled,
