@@ -1,6 +1,8 @@
 import { ArrowLeft } from 'phosphor-react'
 import { FormEvent, useState } from 'react'
+import { api } from '../../../services/api'
 import { CloseButton } from '../../CloseButton'
+import { Loading } from '../../Loading'
 import { ScreenshotButton } from '../ScreenshotButton'
 import { FeedbackType, feedbackTypes } from './FeedbackType'
 
@@ -17,13 +19,21 @@ export function FeedbackContent({
 }: FeedbackContentProps) {
   const [screenshot, setScreenshot] = useState<string | null>(null)
   const [comment, setComment] = useState('')
+  const [isSendingFeedback, setIsSendingFeedback] = useState(false)
 
   const { title, image, text } = feedbackTypes[feedbackType]
 
-  function handleSubmitFeedback(event: FormEvent) {
+  async function handleSubmitFeedback(event: FormEvent) {
     event.preventDefault()
-    console.log(screenshot, comment)
+    setIsSendingFeedback(true)
 
+    await api.post('/feedbacks', {
+      type: feedbackType,
+      comment,
+      screenshot,
+    })
+
+    setIsSendingFeedback(false)
     onFeedbackSent()
   }
 
@@ -68,7 +78,7 @@ export function FeedbackContent({
 
           <button
             type="submit"
-            disabled={comment.trim().length === 0}
+            disabled={comment.trim().length === 0 || isSendingFeedback}
             className="
               p-2 bg-brand-500 rounded-md
               transition-colors duration-200
@@ -81,7 +91,7 @@ export function FeedbackContent({
               disabled:cursor-not-allowed
             "
           >
-            Enviar feedback
+            {isSendingFeedback ? <Loading /> : 'Enviar feedback'}
           </button>
         </footer>
       </form>
