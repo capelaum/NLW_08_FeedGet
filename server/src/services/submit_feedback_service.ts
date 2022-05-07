@@ -39,10 +39,12 @@ export class SubmitFeedbackService {
         `<h1>Feedback recebido com sucesso!</h1>`,
         `<p><strong>Tipo</strong>: ${type}</p>`,
         `<p><strong>Comentário</strong>: ${comment}</p>`,
-        `<p><strong>Screenshot</strong>: ${screenshot}</p>`,
-        `<p><strong>Created in</strong>: ${formatToBrazilianDateTime(
+        `<p><strong>Criado em</strong>: ${formatToBrazilianDateTime(
           created_at
         )}</p>`,
+        screenshot
+          ? `<img src="${screenshot}" alt="Screenshot ${comment}" style="width: 500px;" />`
+          : null,
         `<p>Obrigado por nos ajudar a melhorar o nosso app!</p>`,
         `</div>`,
       ].join('\n'),
