@@ -45,7 +45,6 @@ export class SubmitFeedbackService {
         screenshot
           ? `<img src="${screenshot}" alt="Screenshot ${comment}" style="width: 500px;" />`
           : null,
-        `<p>Obrigado por nos ajudar a melhorar o nosso app!</p>`,
         `</div>`,
       ].join('\n'),
     })
