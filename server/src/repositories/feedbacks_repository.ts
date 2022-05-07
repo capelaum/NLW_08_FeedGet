@@ -1,4 +1,4 @@
-import { Feedback } from '@prisma/client'
+import { Feedbacks } from '@prisma/client'
 
 export interface FeedbackCreateData {
   type: string
@@ -7,5 +7,5 @@ export interface FeedbackCreateData {
 }
 
 export interface FeedbacksRepository {
-  create: (data: FeedbackCreateData) => Promise<Feedback>
+  create: (data: FeedbackCreateData) => Promise<Feedbacks>
 }

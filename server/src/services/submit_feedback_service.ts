@@ -1,4 +1,4 @@
-import { Feedback } from '@prisma/client'
+import { Feedbacks } from '@prisma/client'
 import { MailAdapter } from '../adapters/mail_adapter'
 import { FeedbacksRepository } from '../repositories/feedbacks_repository'
 import { formatToBrazilianDateTime } from '../utils/formatDate'
@@ -15,7 +15,7 @@ export class SubmitFeedbackService {
     private mailAdapter: MailAdapter
   ) {}
 
-  async execute(req: SubmitFeedbackServiceRequest): Promise<Feedback> {
+  async execute(req: SubmitFeedbackServiceRequest): Promise<Feedbacks> {
     const feedback = await this.feedbacksRepository.create(req)
 
     if (!req.type) {
