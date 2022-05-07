@@ -2,7 +2,7 @@
 
 Application of a Feedback Widget that get users feedback using an intuitive and clean interface.
 
-<img src="web/.github/Cover.png" alt="Feedback Widget Cover" width="700px"/>
+<img src=".github/Cover.png" alt="Feedback Widget Cover" width="700px"/>
 
 ## Layout
 
