@@ -1,10 +1,11 @@
 import { ArrowLeft } from 'phosphor-react'
 import { FormEvent, useState } from 'react'
 import { api } from '../../../services/api'
+import { feedbackTypes } from '../../../utils/feedbackTypes'
 import { CloseButton } from '../../CloseButton'
 import { Loading } from '../../Loading'
 import { ScreenshotButton } from '../ScreenshotButton'
-import { FeedbackType, feedbackTypes } from './FeedbackType'
+import { FeedbackType } from './FeedbackType'
 
 interface FeedbackContentProps {
   feedbackType: FeedbackType
