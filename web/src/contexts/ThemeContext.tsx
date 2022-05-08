@@ -18,26 +18,24 @@ interface ThemeContextData {
 const ThemeContext = createContext<ThemeContextData>({} as ThemeContextData)
 
 export function ThemeProvider({ children }: ThemeProviderProps) {
-  const [theme, setTheme] = useState('dark')
+  const [theme, setTheme] = useState('light')
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme')
 
-    if (savedTheme) setTheme(savedTheme)
+    if (savedTheme) {
+      setTheme(savedTheme)
+    }
 
-    if (
-      !savedTheme &&
+    if (!savedTheme) {
       window?.matchMedia('(prefers-color-scheme: dark)').matches
-    ) {
-      setTheme('dark')
-    } else {
-      setTheme('light')
+        ? setTheme('dark')
+        : setTheme('light')
     }
   }, [])
 
   function toggleTheme() {
     const newTheme = theme === 'dark' ? 'light' : 'dark'
-    console.log(newTheme)
 
     setTheme(newTheme)
     localStorage.setItem('theme', newTheme)

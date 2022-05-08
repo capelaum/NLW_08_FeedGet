@@ -17,8 +17,8 @@ export function ScreenshotButton({
   async function handleTakeScreenshot() {
     setIsTakingScreenshot(true)
 
-    const canvas = await html2canvas(document.querySelector('html')!)
-    const base64image = canvas.toDataURL('image/png')
+    const canvas = await html2canvas(document.querySelector('#root')!)
+    const base64image = canvas.toDataURL('image/png', 1.0)
 
     onScreenshotTook(base64image)
 
