@@ -44,8 +44,8 @@ export class NodemailerMailAdapter implements MailAdapter {
     })
 
     await transport.sendMail({
-      from: 'Equipe de suporte FeedGet <suporte@feedget.com>',
-      to: 'Admin <admin@gmail.com>',
+      from: 'Equipe FeedGet <feedget@luiscapelletto.com>',
+      to: 'Suporte FeedGet <suporte_feedget@luiscapelletto.com>',
       subject,
       html: templateHTML
     })
