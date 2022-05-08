@@ -62,6 +62,7 @@ You can check out the Figma design in this link: [Feedback Widget][figma]
 - [Jest][jest]
 - [SWC][swc]
 - [Express][express]
+- [HandlebarsJS][handlebarsjs]
 
 ## Credits
 
@@ -77,6 +78,7 @@ Application designed and ideated in the Next Level Week #8 - Return, and event c
 [jest]: https://jestjs.io
 [swc]: https://swc.rs
 [express]: https://expressjs.com
+[handlebarsjs]: https://handlebarsjs.com/
 [mailtrap]: https://mailtrap.io
 [figma]: https://www.figma.com/community/file/1102912516166573468/Feedback-Widget
 [rocketseat]: https://www.rocketseat.com.br
