@@ -2,33 +2,76 @@
 
 <head>
   <style>
-    .container {
-      width: 800px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 16px;
-      color: #222;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    img {
-      margin: 10px 0;
+    .container {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      color: #27272a;
+      background-color: #f4f4f5;
+    }
+
+    h1 {
+      padding: 10px 20px;
+      background-color: #8257e5;
+      color: #fff;
+    }
+
+    .info {
+      padding: 20px;
+    }
+
+    p+p {
+      padding-top: 16px;
+    }
+
+    .feedback-img {
+      margin-top: 20px;
+      padding: 0 20px;
+      width: 100%;
       max-width: 600px;
     }
 
-  </style>
+    .logo {
+      width: 100%;
+      max-width: 400px;
+    }
 
+    footer {
+      margin-top: 40px;
+      background-color: #27272A;
+      padding-top: 20px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+    }
+
+  </style>
 </head>
 
 <body>
   <div class='container'>
-    <h1>Novo Feedback recebido</h1>
+    <h1>Novo Feedback</h1>
 
-    <p><strong>Tipo</strong>: {{type}}</p>
-    <p><strong>Comentário</strong>: {{comment}}</p>
-    <p><strong>Criado em</strong>: {{created_at}}</p>
+    <div class="info">
+      <p><strong>Tipo</strong>: {{type}}</p>
+      <p><strong>Comentário</strong>:
+        {{comment}}</p>
+      <p><strong>Criado em</strong>:
+        {{created_at}}</p>
+    </div>
 
     {{#if screenshot}}
-    <img src={{screenshot}} alt="Screenshot da tela do feedback: {{comment}}" />
+    <img class="feedback-img" src='{{screenshot}}' alt='Screenshot da tela do feedback: {{comment}}' />
     {{/if}}
+
+    <footer>
+      <img class="logo" src="https://res.cloudinary.com/capelaum/image/upload/v1651997066/nlw-return_xsbuii.png"
+        alt="NLW Return logo">
+    </footer>
   </div>
 </body>
 

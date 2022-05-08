@@ -31,7 +31,7 @@ export class SubmitFeedbackService {
 
     try {
       await this.mailAdapter.sendMail({
-        subject: 'Novo Feedback',
+        subject: 'Novo Feedback ✅',
         feedback
       })
     } catch (err: unknown) {

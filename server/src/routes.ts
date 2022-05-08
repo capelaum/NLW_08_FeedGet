@@ -20,7 +20,7 @@ routes.post('/feedbacks', async (req, res) => {
     const feedback = await submitFeedbackService.execute({
       type,
       comment,
-      screenshot,
+      screenshot
     })
 
     return res.status(201).json({ data: feedback })
