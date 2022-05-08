@@ -1,5 +1,6 @@
 import { ArrowLeft } from 'phosphor-react'
 import { FormEvent, useState } from 'react'
+import { api } from '../../../services/api'
 import { CloseButton } from '../../CloseButton'
 import { Loading } from '../../Loading'
 import { ScreenshotButton } from '../ScreenshotButton'
@@ -26,13 +27,13 @@ export function FeedbackContent({
     event.preventDefault()
     setIsSendingFeedback(true)
 
-    // await api.post('/feedbacks', {
-    //   type: feedbackType,
-    //   comment,
-    //   screenshot
-    // })
+    await api.post('/feedbacks', {
+      type: feedbackType,
+      comment,
+      screenshot
+    })
 
-    // setIsSendingFeedback(false)
+    setIsSendingFeedback(false)
     onFeedbackSent()
   }
 
