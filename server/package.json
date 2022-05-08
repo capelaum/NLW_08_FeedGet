@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev src/server.ts",
-    "build": "tsc",
     "start": "node dist/server.js",
+    "build": "yarn clean && tsc",
+    "postbuild": "copyfiles -u 1 src/**/*.hbs dist/",
+    "clean": "rm -rf ./dist",
     "test": "jest"
   },
   "keywords": [],
@@ -20,6 +22,7 @@
     "@types/jest": "^27.5.0",
     "@types/node": "^17.0.31",
     "@types/nodemailer": "^6.4.4",
+    "copyfiles": "^2.4.1",
     "jest": "^28.0.3",
     "prisma": "^3.13.0",
     "ts-node": "^10.7.0",
