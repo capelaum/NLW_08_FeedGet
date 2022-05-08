@@ -13,10 +13,6 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-main {
-  @apply bg-zinc-100 text-zinc-800 dark:bg-[#09090A] dark:text-zinc-100 flex flex-col flex-grow;
-}
-
 input:disabled,
 button:disabled {
   cursor: not-allowed;
