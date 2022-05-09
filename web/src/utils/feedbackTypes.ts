@@ -25,6 +25,6 @@ export const feedbackTypes = {
       source: thoughtImageUrl,
       alt: 'Imagem de um balão de pensamento'
     },
-    text: 'Queremos te ouvir. O que você gostaria de nos dizer? '
+    text: 'Queremos te ouvir. O que você gostaria de nos dizer?'
   }
 }
