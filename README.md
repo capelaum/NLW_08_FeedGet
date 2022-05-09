@@ -46,8 +46,6 @@ You can check out the Figma design in this link: [Feedback Widget][figma]
 
 ## Tech
 
-- [Typescript][typescript]
-
 ### Frontend
 
 - [ViteJS][vite]
@@ -65,6 +63,13 @@ You can check out the Figma design in this link: [Feedback Widget][figma]
 - [HandlebarsJS][handlebarsjs]
 - [copyfiles][copyfiles]
 
+### Mobile
+
+- [React Native][react_native]
+- [Expo][expo]
+- [phosphor-react-native][phosphor_react_native]
+- [react-native-bottom-sheet][bottom_sheet]
+
 ## Credits
 
 Application designed and ideated in the Next Level Week #8 - Return, and event created by [Rocketseat][rocketseat].
@@ -81,6 +86,10 @@ Application designed and ideated in the Next Level Week #8 - Return, and event c
 [express]: https://expressjs.com
 [handlebarsjs]: https://handlebarsjs.com
 [copyfiles]: https://www.npmjs.com/package/copyfiles
+[expo]: https://expo.dev
+[react_native]: https://reactnative.dev
+[phosphor_react_native]: https://www.npmjs.com/package/phosphor-react-native
+[bottom_sheet]: https://github.com/gorhom/react-native-bottom-sheet
 [mailtrap]: https://mailtrap.io
 [figma]: https://www.figma.com/community/file/1102912516166573468/Feedback-Widget
 [rocketseat]: https://www.rocketseat.com.br
