@@ -3,8 +3,8 @@ import { theme } from '../../theme'
 
 export const styles = StyleSheet.create({
   container: {
-    width: 48,
-    height: 48,
+    width: 40,
+    height: 40,
     borderRadius: 4,
     backgroundColor: theme.colors.surface_secondary,
     justifyContent: 'center',
@@ -18,7 +18,7 @@ export const styles = StyleSheet.create({
     right: 0,
   },
   image: {
-    width: 48,
-    height: 48,
+    width: 40,
+    height: 40,
   },
 })
