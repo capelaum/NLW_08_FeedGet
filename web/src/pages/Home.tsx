@@ -33,7 +33,7 @@ export function Home() {
         </p>
 
         <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-          <div className="inline-flex rounded-md shadow">
+          <div className="inline-flex rounded-lg shadow">
             <a
               href="/demo"
               target="_blank"
