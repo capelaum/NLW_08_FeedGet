@@ -1,7 +1,11 @@
 import { useEffect, useState } from 'react'
+import { NavItem } from './NavItem'
+
+export type NavItemType = 'home' | 'services' | 'about'
 
 export function Nav() {
   const [isNavOnTop, setIsNavOnTop] = useState(true)
+  const [activeNavItem, setActiveNavItem] = useState<NavItemType>('home')
 
   const textColor = '#212529'
   const primaryColor = '#5F3DC4'
@@ -28,13 +32,13 @@ export function Nav() {
   return (
     <nav
       className={`
-          w-full fixed top-0 px-5 py-5 flex justify-center
+          w-full fixed top-0 px-5 flex justify-center
           ${isNavOnTop ? 'bg-transparent' : 'bg-brand-500'}
         `}
     >
       <div
         className="
-            bg-transparent h-8
+            bg-transparent
             flex items-center justify-between
             w-full max-w-[1120px]
           "
@@ -93,19 +97,31 @@ export function Nav() {
         <ul
           className={`
               bg-transparent
-              flex justify-between gap-8
+              flex justify-between gap-10
               ${isNavOnTop ? 'text-brand-500' : 'text-white'}
             `}
         >
-          <li>
-            <a href="#services">Início</a>
-          </li>
-          <li>
-            <a href="#services">Serviços</a>
-          </li>
-          <li>
-            <a href="#services">Sobre</a>
-          </li>
+          <NavItem
+            isNavOnTop={isNavOnTop}
+            isActive={activeNavItem === 'home'}
+            setActiveNavItem={setActiveNavItem}
+            label="Início"
+            link="#home"
+          />
+          <NavItem
+            isNavOnTop={isNavOnTop}
+            isActive={activeNavItem === 'services'}
+            setActiveNavItem={setActiveNavItem}
+            label="Serviços"
+            link="#services"
+          />
+          <NavItem
+            isNavOnTop={isNavOnTop}
+            isActive={activeNavItem === 'about'}
+            setActiveNavItem={setActiveNavItem}
+            label="Sobre"
+            link="#about"
+          />
         </ul>
 
         <a
