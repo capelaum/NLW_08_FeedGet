@@ -33,12 +33,12 @@ export function Services() {
       id="services"
       className="bg-zinc-100 py-40 flex flex-col items-center w-full "
     >
-      <div className="w-full max-w-[1120px] flex flex-col items-center ">
+      <div className="w-full max-w-[1120px]  flex flex-col items-center ">
         <header className="pb-16 max-w-[500px]">
           <h4 className="text-brand-500 text-center text-xs uppercase font-semibold pb-4">
             Serviços
           </h4>
-          <h2 className="text-zinc-900 text-center text-4xl font-semibold">
+          <h2 className="text-zinc-900 text-center text-4xl font-semibold mx-5">
             Como podemos ajudá-lo a se sentir melhor?
           </h2>
         </header>

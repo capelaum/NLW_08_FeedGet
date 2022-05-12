@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Nav } from '../components/Demo/Nav'
+import { About } from '../components/Demo/Sections/About'
 import { Hero } from '../components/Demo/Sections/Hero'
 import { Services } from '../components/Demo/Sections/Services'
 import { Widget } from '../components/Widget'
@@ -15,10 +16,9 @@ export function Demo() {
   return (
     <>
       <Nav />
-
       <Hero />
-
       <Services />
+      <About />
 
       <Widget />
     </>

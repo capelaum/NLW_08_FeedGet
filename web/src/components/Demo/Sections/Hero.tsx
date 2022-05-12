@@ -14,13 +14,13 @@ export function Hero() {
     <section
       id="home"
       className="
-        pt-[120px] w-full flex px-5 justify-center bg-brand-200
+        pt-[120px] w-full flex justify-center bg-brand-200
 
       "
     >
       <div className="w-full max-w-[1120px] flex flex-col items-center mx-5 relative">
-        <div className="flex flex-col lg:flex-row items-center">
-          <div className="flex flex-col  lg:justify-center pb-16">
+        <div className="flex flex-col lg:flex-row ">
+          <div className="flex flex-col w-full lg:justify-center pb-16">
             <header>
               <h4 className="uppercase text-brand-500 font-semibold text-sm text-center lg:text-left">
                 BOAS-VINDAS A DOCTORCARE 👋
