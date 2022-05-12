@@ -2,13 +2,23 @@ import heroImage from '../../../assets/Demo/mulher-negra-com-moleton-verde-com-a
 import { ScheduleButton } from '../ScheduleButton'
 import { HeroStatItem } from './HeroStatItem'
 
+/*
+before:bg-brand-200 before:w-full
+before:h-full
+before:absolute before:block -z-1
+before:top-0 before-left-0  before:content-['']
+*/
+
 export function Hero() {
   return (
     <section
       id="home"
-      className="bg-brand-200 pt-[112px] w-full flex px-5 justify-center pb-24"
+      className="
+        pt-[120px] w-full flex px-5 justify-center bg-brand-200
+
+      "
     >
-      <div className="w-full max-w-[1120px] flex flex-col items-center px-5 relative">
+      <div className="w-full max-w-[1120px] flex flex-col items-center mx-5 relative">
         <div className="flex flex-col lg:flex-row items-center">
           <div className="flex flex-col  lg:justify-center pb-16">
             <header>
@@ -42,7 +52,7 @@ export function Hero() {
         <div
           className="
               w-fit lg:w-full max-w-full
-            bg-beige-500 border border-zinc-100 rounded-lg
+            bg-white border border-zinc-100 rounded-lg
               flex flex-col lg:flex-row justify-between items-center gap-16
               py-10 lg:py-14 px-20 lg:px-[100px]
             "
