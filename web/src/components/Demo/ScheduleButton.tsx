@@ -14,7 +14,7 @@ export function ScheduleButton({ link, variant }: ScheduleButtonProps) {
       className={`
         transition-colors duration-200
         flex items-center justify-center gap-4
-        w-fit mt-8 uppercase
+        w-fit uppercase
         rounded-full px-8 py-4
         ${variantStyles}
       `}

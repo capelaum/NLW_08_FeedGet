@@ -31,7 +31,7 @@ export function Hero() {
             </header>
 
             <div className="flex flex-col items-center lg:items-start">
-              <p className="text-zinc-600 font-medium text-center lg:text-left">
+              <p className="text-zinc-600 font-medium text-center lg:text-left pb-8">
                 Os médicos da DoctorCare vão além dos sintomas para tratar a
                 causa raiz de sua doença e proporcionar uma cura a longo prazo.
               </p>
