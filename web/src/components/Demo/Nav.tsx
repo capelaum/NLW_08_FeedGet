@@ -32,7 +32,7 @@ export function Nav() {
   return (
     <nav
       className={`
-          w-full fixed top-0 px-5 flex justify-center
+          w-full fixed top-0 px-5 flex justify-center z-10
           ${isNavOnTop ? 'bg-transparent' : 'bg-brand-500'}
         `}
     >

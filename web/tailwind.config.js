@@ -12,6 +12,9 @@ module.exports = {
           500: '#8257E5',
           600: '#5F3DC4',
           700: '#331983'
+        },
+        beige: {
+          500: 'hsl(39, 100%, 97%)'
         }
       },
       borderRadius: {
