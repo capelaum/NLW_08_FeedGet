@@ -43,7 +43,7 @@ export function Nav() {
             w-full max-w-[1120px]
           "
       >
-        <a className="w-36 " href="#home">
+        <a className="w-36" href="#home">
           <svg
             width="133"
             height="18"

@@ -1,9 +1,14 @@
 interface ScheduleButtonProps {
   link: string
   variant: string
+  isTargetBlank?: boolean
 }
 
-export function ScheduleButton({ link, variant }: ScheduleButtonProps) {
+export function ScheduleButton({
+  link,
+  variant,
+  isTargetBlank
+}: ScheduleButtonProps) {
   const variantStyles =
     variant === 'primary'
       ? 'bg-brand-500 text-white hover:bg-brand-600'
@@ -19,6 +24,8 @@ export function ScheduleButton({ link, variant }: ScheduleButtonProps) {
         ${variantStyles}
       `}
       href={link}
+      target={isTargetBlank ? '_blank' : ''}
+      rel="noopener noreferrer"
     >
       <svg
         width="20"

@@ -75,7 +75,11 @@ export function Contact() {
               </li>
             </ul>
 
-            <ScheduleButton variant="primary" link="#contact" />
+            <ScheduleButton
+              variant="primary"
+              link="https://wa.me/5511987654321"
+              isTargetBlank
+            />
           </div>
         </div>
 
