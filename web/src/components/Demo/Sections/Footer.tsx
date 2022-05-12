@@ -66,7 +66,7 @@ export function Footer() {
         </div>
 
         <div className="col-b">
-          <ul className="flex gap-8 items-start border border-red-500">
+          <ul className="flex gap-8 items-start">
             <li>
               <a target="_blank" href="https://instagram.com/capelletto.lv">
                 <svg
