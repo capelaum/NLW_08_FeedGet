@@ -50,7 +50,7 @@ export function Services() {
           "
         >
           {servicesCards.map(({ title, text }) => (
-            <ServiceCard title={title} text={text} />
+            <ServiceCard key={title} title={title} text={text} />
           ))}
         </div>
       </div>

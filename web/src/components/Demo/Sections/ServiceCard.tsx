@@ -17,9 +17,9 @@ export function ServiceCard({ title, text }: ServiceCardProps) {
         <path
           d="M17.091 8.18188L10.091 15.1819L6.90918 12.0001"
           stroke="#5F3DC4"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
 

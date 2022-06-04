@@ -15,7 +15,6 @@ export function Hero() {
       id="home"
       className="
         pt-[120px] w-full flex justify-center bg-brand-200
-
       "
     >
       <div className="w-full max-w-[1120px] flex flex-col items-center mx-5 relative">
@@ -40,7 +39,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="lg:mr-5">
+          <div className="lg:mr-5 border flex justify-center">
             <img
               src={heroImage}
               alt="Mulher negra vestindo moletom verde com as duas mãos no peito e sorrindo"
