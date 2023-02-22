@@ -8,7 +8,7 @@ const feedbackTest = {
   type: 'bug',
   comment: 'test',
   screenshot: 'test',
-  created_at: new Date(),
+  created_at: new Date()
 }
 
 const submitFeedbackService = new SubmitFeedbackService(
@@ -22,7 +22,7 @@ describe('Submit Feedback', () => {
       submitFeedbackService.execute({
         type: 'BUG',
         comment: 'test',
-        screenshot: 'data:image/png;base64,test',
+        screenshot: 'data:image/png;base64,test'
       })
     ).resolves.not.toThrow()
 
@@ -34,7 +34,7 @@ describe('Submit Feedback', () => {
       submitFeedbackService.execute({
         type: '',
         comment: 'test',
-        screenshot: 'data:image/png;base64,test',
+        screenshot: 'data:image/png;base64,test'
       })
     ).rejects.toThrow()
   })
@@ -44,17 +44,17 @@ describe('Submit Feedback', () => {
       submitFeedbackService.execute({
         type: 'BUG',
         comment: '',
-        screenshot: 'data:image/png;base64,test',
+        screenshot: 'data:image/png;base64,test'
       })
     ).rejects.toThrow()
   })
 
-  it('should not be able to submit feedback without a invalid screenshot', async () => {
+  it('should not be able to submit feedback without a valid screenshot', async () => {
     await expect(
       submitFeedbackService.execute({
         type: 'BUG',
         comment: 'test',
-        screenshot: 'test.png',
+        screenshot: 'test.png'
       })
     ).rejects.toThrow()
   })
