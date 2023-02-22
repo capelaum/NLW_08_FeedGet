@@ -15,9 +15,14 @@ export const {
       white: '#fff',
       black: '#000',
 
+      pink: '#eb499a',
+
       brand500: '#8257E5',
       brand400: '#996DFF',
       brandText: '#fff',
+
+      darkBg: '#0d1016',
+      lightBg: '#fafafa',
 
       // Dark theme
       darkBgPrimary: '#18181b',

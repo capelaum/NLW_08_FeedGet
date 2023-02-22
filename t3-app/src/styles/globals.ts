@@ -6,18 +6,20 @@ export const globalStyles = globalCss({
     padding: 0,
     boxSizing: 'border-box',
   },
+
   html: {
     scrollBehavior: 'smooth',
   },
+
   body: {
-    backgroundColor: '$gray50',
-    color: '$slate900',
+    backgroundColor: '$darkBg',
+    color: '$white',
+    overflow: 'hidden',
     fontFamily: '$inter',
-    fontWeight: 400,
     '-webkit-font-smoothing': 'antialised',
   },
+
   'a, button': {
-    fontFamily: '$inter',
     cursor: 'pointer',
     border: 'none',
 
@@ -25,8 +27,5 @@ export const globalStyles = globalCss({
       cursor: 'not-allowed',
       opacity: 0.7,
     },
-  },
-  input: {
-    fontFamily: '$inter',
   },
 })
