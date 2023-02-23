@@ -17,14 +17,8 @@ const config = {
    * @see https://github.com/vercel/next.js/issues/41980
    */
   i18n: {
-    locales: ['en'],
-    defaultLocale: 'en',
-  },
-
-  experimental: {
-    fontLoaders: [
-      { loader: '@next/font/google', options: { subsets: ['latin'] } },
-    ],
+    locales: ['pt-BR'],
+    defaultLocale: 'pt-BR',
   },
 }
 export default config

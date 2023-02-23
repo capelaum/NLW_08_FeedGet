@@ -27,6 +27,7 @@ const Home: NextPage = () => {
 
     const moveDuration = `${8000 + randomNumberInRange(1, 3000)}ms`
     const animationDelay = `${randomNumberInRange(1, 11000)}ms`
+    const circleAnimationDelay = `${randomNumberInRange(1, 4000)}ms`
 
     const fromX = randomNumberInRange(1, 100)
     const toX = randomNumberInRange(1, 100)
@@ -60,7 +61,7 @@ const Home: NextPage = () => {
       >
         <Circle
           css={{
-            animationDelay: `${randomNumberInRange(0, 4000)}ms`,
+            animationDelay: circleAnimationDelay,
           }}
         />
       </CircleContainer>

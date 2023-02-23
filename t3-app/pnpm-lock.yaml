@@ -5,6 +5,7 @@ specifiers:
   '@prisma/client': ^4.9.0
   '@stitches/react': ^1.2.8
   '@tanstack/react-query': ^4.20.2
+  '@total-typescript/ts-reset': ^0.3.7
   '@trpc/client': ^10.9.0
   '@trpc/next': ^10.9.0
   '@trpc/react-query': ^10.9.0
@@ -41,6 +42,7 @@ dependencies:
   zod: 3.20.6
 
 devDependencies:
+  '@total-typescript/ts-reset': 0.3.7
   '@types/eslint': 8.21.1
   '@types/node': 18.14.0
   '@types/react': 18.0.28
@@ -323,6 +325,10 @@ packages:
       react-dom: 18.2.0_react@18.2.0
       use-sync-external-store: 1.2.0_react@18.2.0
     dev: false
+
+  /@total-typescript/ts-reset/0.3.7:
+    resolution: {integrity: sha512-yXt2BRRVCJVvzWaxac5n0nCXzIrQEBE/MeYlNQ8/Iq7UeelNmm/AdnUAu18ilSS893mbEQ4u6whPt/HvOPc4rw==}
+    dev: true
 
   /@trpc/client/10.12.0_@trpc+server@10.12.0:
     resolution: {integrity: sha512-CUBRaE0FpYiRnPGkFB9oLD2cdFd5fSzQwPSR7/zXNKMjwdE+5P7q5mtgbh3bFey3lYidmpKDFgYRnl9Cz2Z7OQ==}
