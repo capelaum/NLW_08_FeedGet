@@ -19,12 +19,12 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
 
+          <Favicon />
+
           <style
             id="stitches"
             dangerouslySetInnerHTML={{ __html: getCssText() }}
           />
-
-          <Favicon />
 
           <SEO
             title="NLW Return - FeedGet"

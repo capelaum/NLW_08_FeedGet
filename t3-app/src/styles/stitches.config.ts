@@ -104,4 +104,6 @@ export const {
     bp2: '(max-width: 576px)',
     bp3: '(max-width: 480px)',
   },
+
+  prefix: 'stitches',
 })
