@@ -17,7 +17,7 @@ export function SnowAnimation() {
     return Math.floor(Math.random() * (max - min + 1)) + min
   }
 
-  for (let index = 0; index < 100; index++) {
+  for (let index = 0; index < 200; index++) {
     const circleSize = randomNumberInRange(1, 8)
     const circleWidth = `${circleSize}px`
     const circleHeight = `${circleSize}px`

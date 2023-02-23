@@ -17,7 +17,7 @@ export const CircleContainer = styled('div', {
   position: 'absolute',
   top: -20,
   left: 0,
-  zIndex: -1,
+  zIndex: 0,
   animationIterationCount: 'infinite',
   animationTimingFunction: 'linear',
 })
@@ -27,6 +27,7 @@ export const Circle = styled('div', {
   height: '100%',
   borderRadius: '50%',
   mixBlendMode: 'screen',
-  backgroundImage: 'radial-gradient($pink 0%, $brand400 10%, $darkBg 56%)',
+  backgroundImage:
+    'radial-gradient($brand400 0%, $brand500 10%, transparent 56%)',
   animation: `${fadeIn} 200ms infinite, ${scale} 2s infinite`,
 })

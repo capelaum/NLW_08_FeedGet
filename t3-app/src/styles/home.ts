@@ -13,6 +13,7 @@ export const HomeWrapper = styled('div', {
 
   'h1, h2': {
     textAlign: 'center',
+    zIndex: 2,
   },
 
   h1: {
@@ -27,6 +28,19 @@ export const HomeWrapper = styled('div', {
   h2: {
     fontSize: '24px',
     fontWeight: 500,
+  },
+
+  variants: {
+    theme: {
+      light: {
+        color: '$lightTextPrimary',
+        backgroundColor: '$lightBgPrimary',
+      },
+      dark: {
+        color: '$darkTextPrimary',
+        backgroundColor: '$darkBgPrimary',
+      },
+    },
   },
 
   '@bp1': {
