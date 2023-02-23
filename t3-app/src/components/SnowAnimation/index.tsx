@@ -11,9 +11,7 @@ type Circle = {
 }
 
 export function SnowAnimation() {
-  // const [circles, setCircles] = useState<ReactNode[]>([])
   const circles = []
-  console.log('💥 ~ circles:', circles.length)
 
   function randomNumberInRange(min: number, max: number) {
     return Math.floor(Math.random() * (max - min + 1)) + min
