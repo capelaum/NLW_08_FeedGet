@@ -25,7 +25,10 @@ export function Widget() {
     <Root>
       <WidgetTriggerButton aria-label="Criar Feedback" title="Criar Feedback">
         <ChatTeardropDots size={25} weight="regular" />
-        <span>Feedback</span>
+        <span>
+          <span></span>
+          Feedback
+        </span>
       </WidgetTriggerButton>
 
       <Portal>
@@ -58,7 +61,7 @@ export function Widget() {
               target="_blank"
               rel="noreferrer noopener"
             >
-              capelaum
+              Luís V. Capelletto
             </Link>
           </WidgetFooter>
         </WidgetContent>

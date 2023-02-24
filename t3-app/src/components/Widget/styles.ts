@@ -131,13 +131,20 @@ export const WidgetTriggerButton = styled(Popover.Trigger, {
     fontWeight: '$normal',
     maxWidth: 0,
     overflow: 'hidden',
+    transition: 'all 0.2s linear',
 
-    transition: 'all 0.3s linear',
+    '& > span': {
+      paddingLeft: '0.5rem',
+    },
   },
 
-  transition: 'all 0.3s linear',
-
   '&:hover': {
+    span: {
+      maxWidth: '100%',
+    },
+  },
+
+  '&[data-state="open"]': {
     span: {
       maxWidth: '100%',
     },
