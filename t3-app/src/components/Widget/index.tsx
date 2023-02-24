@@ -4,6 +4,7 @@ import { ChatTeardropDots, X } from 'phosphor-react'
 import { useState } from 'react'
 import { useTheme } from '~/contexts/ThemeContext'
 import { FeedbackContent } from './Steps/FeebackContent'
+import { FeedbackSuccess } from './Steps/FeedbackSuccess'
 import { FeedbackType } from './Steps/FeedbackType'
 import {
   WidgetCloseButton,
@@ -27,9 +28,9 @@ export function Widget() {
   }
 
   function renderContent() {
-    // if (feedbackSent) {
-    //   return <FeedbackSuccess onFeedbackRestart={handleRestartFeedback} />
-    // }
+    if (feedbackSent) {
+      return <FeedbackSuccess onFeedbackRestart={handleRestartFeedback} />
+    }
 
     if (feedbackType) {
       return (
@@ -56,7 +57,11 @@ export function Widget() {
 
       <Portal>
         <WidgetContent sideOffset={16} data-side="top" theme={theme}>
-          <WidgetCloseButton theme={theme} aria-label="Close">
+          <WidgetCloseButton
+            theme={theme}
+            aria-label="Close"
+            onClick={handleRestartFeedback}
+          >
             <X size={16} weight="bold" />
           </WidgetCloseButton>
 

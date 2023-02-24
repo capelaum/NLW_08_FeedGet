@@ -17,16 +17,4 @@ export const LoadingWrapper = styled('div', {
   svg: {
     animation: `${spin} 0.7s linear infinite`,
   },
-
-  variants: {
-    theme: {
-      light: {
-        color: '$lightTextPrimary',
-      },
-
-      dark: {
-        color: '$darkTextPrimary',
-      },
-    },
-  },
 })

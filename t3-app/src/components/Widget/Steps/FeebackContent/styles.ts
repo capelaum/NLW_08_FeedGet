@@ -101,7 +101,7 @@ export const WidgetButtonsWrapper = styled('div', {
   marginTop: '1rem',
 })
 
-export const SubmitButton = styled('button', {
+export const WidgetSubmitButton = styled('button', {
   all: 'unset',
   padding: '0.75rem',
   borderRadius: '4px',

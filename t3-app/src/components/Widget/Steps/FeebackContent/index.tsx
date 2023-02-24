@@ -7,10 +7,10 @@ import { Loading } from '../../Loading'
 import { ScreenshotButton } from '../../ScreenshotButton'
 import { type FeedbackType } from '../FeedbackType'
 import {
-  SubmitButton,
   WidgetButtonsWrapper,
   WidgetForm,
   WidgetRestartButton,
+  WidgetSubmitButton,
   WidgetTextarea,
 } from './styles'
 
@@ -75,12 +75,12 @@ export function FeedbackContent({
             setScreenshot={setScreenshot}
           />
 
-          <SubmitButton
+          <WidgetSubmitButton
             type="submit"
             disabled={comment.trim().length === 0 || isSendingFeedback}
           >
             {isSendingFeedback ? <Loading /> : 'Enviar feedback'}
-          </SubmitButton>
+          </WidgetSubmitButton>
         </WidgetButtonsWrapper>
       </WidgetForm>
     </>

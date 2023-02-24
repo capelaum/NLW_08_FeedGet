@@ -160,7 +160,7 @@ export const WidgetTriggerButton = styled(Popover.Trigger, {
 })
 
 export const WidgetFooter = styled('footer', {
-  fontSize: '$xs',
+  fontSize: '12px',
   fontWeight: '$normal',
   gap: '0.5rem',
 
