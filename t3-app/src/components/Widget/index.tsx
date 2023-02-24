@@ -1,20 +1,15 @@
 import { Portal, Root } from '@radix-ui/react-popover'
-import Image from 'next/image'
 import Link from 'next/link'
 import { ChatTeardropDots, X } from 'phosphor-react'
 import { useState } from 'react'
 import { useTheme } from '~/contexts/ThemeContext'
-import { feedbackTypes } from './data/feedbackTypes'
+import { FeedbackType } from './Steps/FeedbackType'
 import {
-  FeedbackTypeButton,
-  FeedbackTypeButtonsWrapper,
   WidgetCloseButton,
   WidgetContent,
   WidgetFooter,
   WidgetTriggerButton,
 } from './styles'
-
-export type FeedbackType = keyof typeof feedbackTypes
 
 export function Widget() {
   const { theme } = useTheme()
@@ -37,22 +32,7 @@ export function Widget() {
             <X size={16} weight="bold" />
           </WidgetCloseButton>
 
-          <h1>Deixe seu Feedback</h1>
-
-          <FeedbackTypeButtonsWrapper>
-            {Object.entries(feedbackTypes).map(([type, { title, image }]) => (
-              <FeedbackTypeButton
-                theme={theme}
-                key={type}
-                type="button"
-                title={title}
-                onClick={() => setFeedbackType(type as FeedbackType)}
-              >
-                <Image src={image.source} alt={image.alt} />
-                <h2 className=" dark:text-zinc-400">{title}</h2>
-              </FeedbackTypeButton>
-            ))}
-          </FeedbackTypeButtonsWrapper>
+          <FeedbackType setFeedbackType={setFeedbackType} />
 
           <WidgetFooter theme={theme}>
             Feito com 💜 por{' '}
