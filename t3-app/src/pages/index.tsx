@@ -1,12 +1,22 @@
 import { type NextPage } from 'next'
+import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import Image, { type StaticImageData } from 'next/image'
 import waveBottomLeft from '~/assets/images/wave-bottom-left.svg'
 import waveTopRight from '~/assets/images/wave-top-right.svg'
-import { SnowAnimation } from '~/components/SnowAnimation'
 import { ToggleThemeButton } from '~/components/ToggleThemeButton'
 import { useTheme } from '~/contexts/ThemeContext'
 import { HomeWrapper, WaveWrapper } from '~/styles/home'
+
+const SnowAnimation = dynamic(
+  () =>
+    import('~/components/SnowAnimation').then(
+      ({ SnowAnimation }) => SnowAnimation
+    ),
+  {
+    ssr: false,
+  }
+)
 
 const Home: NextPage = () => {
   const { theme } = useTheme()
