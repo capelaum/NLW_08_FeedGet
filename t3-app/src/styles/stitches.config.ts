@@ -21,11 +21,11 @@ export const {
       brand400: '#996DFF',
       brandText: '#fff',
 
-      darkBg: '#0d1016',
+      darkBg: '#09090a',
       lightBg: '#fafafa',
 
       // Dark theme
-      darkBgPrimary: '#18181b',
+      darkBgPrimary: '#18181B',
       darkBgSecondary: '#27272a',
       darkBgSecondaryHover: '#3f3f46',
 
@@ -81,6 +81,7 @@ export const {
 
     radii: {
       default: '8px',
+      md: '16px',
       lg: '24px',
       xl: '32px',
       circle: '50%',

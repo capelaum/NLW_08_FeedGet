@@ -34,11 +34,11 @@ export const HomeWrapper = styled('div', {
     theme: {
       light: {
         color: '$lightTextPrimary',
-        backgroundColor: '$lightBgPrimary',
+        backgroundColor: '$lightBg',
       },
       dark: {
         color: '$darkTextPrimary',
-        backgroundColor: '$darkBgPrimary',
+        backgroundColor: '$darkBg',
       },
     },
   },

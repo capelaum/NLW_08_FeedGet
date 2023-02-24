@@ -5,6 +5,7 @@ import Image, { type StaticImageData } from 'next/image'
 import waveBottomLeft from '~/assets/images/wave-bottom-left.svg'
 import waveTopRight from '~/assets/images/wave-top-right.svg'
 import { ToggleThemeButton } from '~/components/ToggleThemeButton'
+import { Widget } from '~/components/Widget'
 import { useTheme } from '~/contexts/ThemeContext'
 import { HomeWrapper, WaveWrapper } from '~/styles/home'
 
@@ -30,9 +31,9 @@ const Home: NextPage = () => {
         <h1>FeedGet Widget</h1>
         <h2>Um widget de feedbacks perfeito para os seus projetos!</h2>
 
-        <SnowAnimation />
-
         <ToggleThemeButton />
+        <SnowAnimation />
+        <Widget />
 
         <WaveWrapper position="top-right">
           <Image
