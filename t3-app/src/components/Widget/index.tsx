@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { ChatTeardropDots, X } from 'phosphor-react'
 import { useState } from 'react'
 import { useTheme } from '~/contexts/ThemeContext'
+import { FeedbackContent } from './Steps/FeebackContent'
 import { FeedbackType } from './Steps/FeedbackType'
 import {
   WidgetCloseButton,
@@ -15,6 +16,33 @@ export function Widget() {
   const { theme } = useTheme()
   const [feedbackType, setFeedbackType] = useState<FeedbackType | null>(null)
   const [feedbackSent, setFeedbackSent] = useState(false)
+
+  function handleRestartFeedback() {
+    setFeedbackSent(false)
+    setFeedbackType(null)
+  }
+
+  function handleSendFeedback() {
+    setFeedbackSent(true)
+  }
+
+  function renderContent() {
+    // if (feedbackSent) {
+    //   return <FeedbackSuccess onFeedbackRestart={handleRestartFeedback} />
+    // }
+
+    if (feedbackType) {
+      return (
+        <FeedbackContent
+          feedbackType={feedbackType}
+          handleRestartFeedback={handleRestartFeedback}
+          handleSendFeedback={handleSendFeedback}
+        />
+      )
+    }
+
+    return <FeedbackType setFeedbackType={setFeedbackType} />
+  }
 
   return (
     <Root>
@@ -32,7 +60,7 @@ export function Widget() {
             <X size={16} weight="bold" />
           </WidgetCloseButton>
 
-          <FeedbackType setFeedbackType={setFeedbackType} />
+          {renderContent()}
 
           <WidgetFooter theme={theme}>
             Feito com 💜 por{' '}

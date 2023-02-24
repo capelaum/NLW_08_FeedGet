@@ -30,6 +30,7 @@ export const WidgetContent = styled(Popover.Content, {
 
   zIndex: 3,
   marginRight: '1.25rem',
+  minWidth: 340,
 
   display: 'flex',
   flexDirection: 'column',
@@ -44,8 +45,16 @@ export const WidgetContent = styled(Popover.Content, {
   },
 
   h1: {
-    fontSize: '$lg',
+    fontSize: '$md',
     fontWeight: '$medium',
+    display: 'flex',
+    alignItems: 'center',
+
+    img: {
+      width: 24,
+      height: 24,
+      marginRight: '0.5rem',
+    },
   },
 
   boxShadow: '$default',
@@ -65,8 +74,7 @@ export const WidgetContent = styled(Popover.Content, {
   },
 
   '&:focus': {
-    outline: 'none',
-    border: '1px solid $brand500',
+    outline: '1px solid $brand500',
   },
 })
 
