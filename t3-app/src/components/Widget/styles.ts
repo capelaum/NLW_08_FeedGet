@@ -76,6 +76,10 @@ export const WidgetContent = styled(Popover.Content, {
   '&:focus': {
     outline: '1px solid $brand500',
   },
+
+  '@bp3': {
+    minWidth: 280,
+  },
 })
 
 export const WidgetCloseButton = styled(Popover.Close, {

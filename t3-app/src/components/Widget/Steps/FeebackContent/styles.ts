@@ -97,6 +97,7 @@ export const WidgetTextarea = styled('textarea', {
 
 export const WidgetButtonsWrapper = styled('div', {
   display: 'flex',
+  alignItems: 'center',
   gap: '0.5rem',
   marginTop: '1rem',
 })
