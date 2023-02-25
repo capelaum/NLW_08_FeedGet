@@ -1,7 +1,9 @@
 import Image from 'next/image'
 import { ArrowLeft } from 'phosphor-react'
 import { useState, type FormEvent } from 'react'
+import { toast } from 'react-toastify'
 import { useTheme } from '~/contexts/ThemeContext'
+import { api } from '~/utils/api'
 import { feedbackTypes } from '../../data/feedbackTypes'
 import { Loading } from '../../Loading'
 import { ScreenshotButton } from '../../ScreenshotButton'
@@ -17,13 +19,13 @@ import {
 interface FeedbackContentProps {
   feedbackType: FeedbackType
   handleRestartFeedback: () => void
-  handleSendFeedback: () => void
+  setFeedbackSent: (isFeedbackSent: boolean) => void
 }
 
 export function FeedbackContent({
   feedbackType,
   handleRestartFeedback,
-  handleSendFeedback,
+  setFeedbackSent,
 }: FeedbackContentProps) {
   const [isSendingFeedback, setIsSendingFeedback] = useState(false)
   const [screenshot, setScreenshot] = useState<string | null>(null)
@@ -33,18 +35,41 @@ export function FeedbackContent({
 
   const { title, image, text } = feedbackTypes[feedbackType]
 
-  function handleSubmitFeedback(event: FormEvent) {
-    event.preventDefault()
-    setIsSendingFeedback(true)
-
-    console.log('Feedback Enviado:', {
-      type: feedbackType,
-      comment,
-      screenshot,
+  const { mutateAsync: createFeedbackMutation } =
+    api.feedback.create.useMutation({
+      onSuccess: () => {
+        setFeedbackSent(true)
+      },
     })
 
+  async function handleSubmitFeedback(event: FormEvent): Promise<void> {
+    event.preventDefault()
+
+    if (comment.trim().length < 3) {
+      toast.error('O comentário deve ter no mínimo 3 caracteres')
+      return
+    }
+
+    if (comment.trim().length > 255) {
+      toast.error('O comentário deve ter no máximo 255 caracteres')
+    }
+
+    setIsSendingFeedback(true)
+
+    try {
+      await createFeedbackMutation({
+        type: feedbackType,
+        comment: comment.trim(),
+        screenshot: screenshot ?? undefined,
+      })
+    } catch (error) {
+      console.error(error)
+      toast.error(
+        'Ocorreu um erro ao enviar o feedback. Por favor, tente novamente 😕'
+      )
+    }
+
     setIsSendingFeedback(false)
-    handleSendFeedback()
   }
 
   return (
@@ -62,7 +87,7 @@ export function FeedbackContent({
         <ArrowLeft size={16} weight="bold" />
       </WidgetRestartButton>
 
-      <WidgetForm onSubmit={handleSubmitFeedback}>
+      <WidgetForm onSubmit={(e) => void handleSubmitFeedback(e)}>
         <WidgetTextarea
           theme={theme}
           placeholder={text}

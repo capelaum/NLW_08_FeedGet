@@ -13,8 +13,8 @@ datasource db {
 model Feedbacks {
     id         String  @id @default(cuid())
     type       String
-    comment    String
-    screenshot String?
+    comment    String  @db.Text
+    screenshot String? @db.LongText
 
     created_at DateTime @default(now())
 

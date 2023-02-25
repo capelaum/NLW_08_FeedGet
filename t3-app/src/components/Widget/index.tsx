@@ -23,10 +23,6 @@ export function Widget() {
     setFeedbackType(null)
   }
 
-  function handleSendFeedback() {
-    setFeedbackSent(true)
-  }
-
   function renderContent() {
     if (feedbackSent) {
       return <FeedbackSuccess onFeedbackRestart={handleRestartFeedback} />
@@ -37,7 +33,7 @@ export function Widget() {
         <FeedbackContent
           feedbackType={feedbackType}
           handleRestartFeedback={handleRestartFeedback}
-          handleSendFeedback={handleSendFeedback}
+          setFeedbackSent={setFeedbackSent}
         />
       )
     }
