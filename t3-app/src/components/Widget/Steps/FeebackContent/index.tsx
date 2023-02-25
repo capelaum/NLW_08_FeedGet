@@ -52,6 +52,7 @@ export function FeedbackContent({
 
     if (comment.trim().length > 255) {
       toast.error('O comentário deve ter no máximo 255 caracteres')
+      return
     }
 
     setIsSendingFeedback(true)
