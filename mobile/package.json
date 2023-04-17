@@ -27,7 +27,7 @@
     "react-native-reanimated": "~2.14.4",
     "react-native-svg": "12.5.1",
     "react-native-view-shot": "3.5.0",
-    "react-native-web": "0.18.12"
+    "react-native-web": "0.19.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
