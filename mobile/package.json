@@ -16,7 +16,7 @@
     "expo": "~45.0.8",
     "expo-file-system": "~14.1.0",
     "expo-font": "~10.2.1",
-    "expo-splash-screen": "~0.18.0",
+    "expo-splash-screen": "~0.18.2",
     "expo-status-bar": "~1.4.3",
     "phosphor-react-native": "^1.1.2",
     "react": "17.0.2",
